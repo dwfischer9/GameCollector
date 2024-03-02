@@ -1,6 +1,6 @@
-# Game Collecor App
+# Game Collection Tracker
 
-## My First Try at React.js!
+### My First Try at React.js!
 
 ## Introduction
 
