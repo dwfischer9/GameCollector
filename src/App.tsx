@@ -30,7 +30,9 @@ const App = () => {
       {alertVisible && (
         <Alert onClose={() => setVisibility(false)}>Sample Warning Alert</Alert>
       )}
-      <Button onClick={handleRequest}>Trigger Alert</Button>
+      <Button onClick={handleRequest}>Sample Query</Button>
+      <Button onClick={()=>setVisibility(true)}>Trigger Alert</Button>
+      
       <Header />{" "}
       <ListGroup items={items} heading={heading} onSelect={handleSelect} />
     </div>
