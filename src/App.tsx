@@ -3,6 +3,7 @@ import Alert from "./components/Alert";
 import Card from "./components/Card";
 import ListGroup from "./components/ListGroup";
 import Button from "./components/Button";
+import Header from "./components/Header";
 import { useState } from "react";
 import axios from "axios";
 const App = () => {
@@ -25,12 +26,13 @@ const App = () => {
     "PlayStation 3",
     "Nintendo Switch",
   ];
-  let cardStyle = {width:'10%'};
+  let cardStyle = {width:'20%'};
   let style = {
     backgroundColor: '#272727'}
   let heading = "Video Game Collector's Database";
   return (
-    <div style={style}>
+    
+    <div style={style}><Header/>
       {alertVisible && (
         <Alert onClose={() => setVisibility(false)}>Sample Warning Alert</Alert>
         )}

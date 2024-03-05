@@ -7,7 +7,7 @@ const Card = ({children}:CardProps) =>{
   <img src="..." className="card-img-top" alt="..."/>
   <div className="card-body">
     <h5 className="card-title">Card title</h5>
-    <p className="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio nemo vel impedit explicabo blanditiis ab corrupti magnam fuga temporibus cumque!</p>
+    <p className="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
     {children}
   </div>
 </div>
