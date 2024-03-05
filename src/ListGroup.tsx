@@ -1,13 +1,13 @@
 import { useState } from "react";
 interface ListGroupProps {
   items: string[];
-  heading: string;
-  onSelect: (item: string) => void;
+    heading: string;
+    onSelect: (item: string) => void;
 }
 const sty = {
-  color: "#FFFFFF",
-  backgroundColor: '#272727',
-  border: '1px solid #272727'
+color: "#FFFFFF",
+backgroundColor: '#272727',
+border : '1px solid #272727'
 };
 function ListGroup({ items, heading, onSelect }: ListGroupProps) {
   const [selectedIndex, setSelectedIndex] = useState(-1);
@@ -21,26 +21,25 @@ function ListGroup({ items, heading, onSelect }: ListGroupProps) {
 
       <h1>{heading}</h1>
       {getMsg()}
-      <ul style={sty} className="list-group" >
+      <ul  style={sty} className="list-group" >
         {items.map((item, index) => (
-          <li style={sty}
-            className={
-              selectedIndex === index
-                ? "list-group-item active"
-                : "list-group-item"
-            }
-            key={item}
-            onClick={() => {
-              setSelectedIndex(index);
-              onSelect(item);
-            }
-            }
+          <li  style={sty}
+          className={
+            selectedIndex === index
+            ? "list-group-item active"
+            : "list-group-item"
+          }
+          key={item}
+          onClick={() =>{
+            setSelectedIndex(index);
+            onSelect(item);}
+          }
           >
             {item}
           </li>
         ))}
       </ul>
-    </div>
+      </div>
     </>
   );
 }

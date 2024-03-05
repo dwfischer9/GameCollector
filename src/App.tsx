@@ -1,5 +1,6 @@
-import Header from "./components/Header";
+// import Header from "./components/Header";
 import Alert from "./components/Alert";
+import Card from "./components/Card";
 import ListGroup from "./components/ListGroup";
 import Button from "./components/Button";
 import { useState } from "react";
@@ -24,17 +25,21 @@ const App = () => {
     "PlayStation 3",
     "Nintendo Switch",
   ];
+  let cardStyle = {width:'10%'};
+  let style = {
+    backgroundColor: '#272727'}
   let heading = "Video Game Collector's Database";
   return (
-    <div>
+    <div style={style}>
       {alertVisible && (
         <Alert onClose={() => setVisibility(false)}>Sample Warning Alert</Alert>
-      )}
+        )}
+        <ListGroup items={items} heading={heading} onSelect={handleSelect} />
+      <div style={cardStyle}><Card><a href="#" className="btn btn-primary">Go somewhere</a></Card></div>
       <Button onClick={handleRequest}>Sample Query</Button>
       <Button onClick={()=>setVisibility(true)}>Trigger Alert</Button>
       
-      <Header />{" "}
-      <ListGroup items={items} heading={heading} onSelect={handleSelect} />
+      {/* <Header />{" "} */}
     </div>
   );
 };
