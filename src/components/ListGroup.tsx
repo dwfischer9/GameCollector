@@ -1,7 +1,7 @@
 import { useState } from "react";
 interface ListGroupProps {
   items: string[];
-  heading: string;
+  heading?: string;
   onSelect: (item: string) => void;
 }
 const sty = {
@@ -11,7 +11,7 @@ const sty = {
 };
 function ListGroup({ items, heading, onSelect }: ListGroupProps) {
   const [selectedIndex, setSelectedIndex] = useState(-1);
-
+  
   const getMsg = () => {
     return items.length === 0 && <p> No item found </p>;
   };
