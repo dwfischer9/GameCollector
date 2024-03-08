@@ -1,16 +1,24 @@
-interface CardProps{
-    children?:String|JSX.Element|JSX.Element[];
+// Card.tsx
+
+import React from 'react';
+
+interface CardData {
+  image: string;
+  alt: string;
+  title: string;
+  description: string;
 }
-const Card = ({children}:CardProps) =>{
-    return (<>
+
+const Card: React.FC<{ data: CardData }> = ({ data }) => {
+  return (
     <div className="card">
-  <img src="..." className="card-img-top" alt="..."/>
-  <div className="card-body">
-    <h5 className="card-title">Card title</h5>
-    <p className="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
-    {children}
-  </div>
-</div>
-    </>);
+      <img className="card-img-top" />
+      <div className="card-body">
+        <h5 className="card-title"></h5>
+        <p className="card-text"></p>
+      </div>
+    </div>
+  );
 };
+
 export default Card;

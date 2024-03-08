@@ -1,4 +1,7 @@
 import "../css/Navbar.css"
+interface NavbarProps{
+  children?: String | JSX.Element | JSX.Element[]|Function;
+}
 function Navbar() {
     return <>
   <nav className="navbar navbar-expand-lg bg-body-tertiary" id="navbar-container">
