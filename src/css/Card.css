@@ -1,0 +1,25 @@
+div.card , .card .card-body, div .card-img-top{
+border-top-left-radius: 20px;
+border-top-right-radius: 20px;
+border-bottom-left-radius: 10px;
+border-bottom-right-radius: 10px;
+}
+div.card{
+    width:18rem;
+    float:left;
+}
+
+.card .card-body {
+    background-color: #37353a;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: white; 
+}
+.card-body .card-title{
+    font-weight: 800;
+    text-align: center;
+}
+
+
+.card-body .card-text{
+
+}
